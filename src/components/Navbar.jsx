@@ -10,9 +10,13 @@ const Navbar = () => {
 
 	return (
 		<nav
-			className={`${styles.paddingX} border-2 w-full items-center py-5 top-0 fixed z-20 bg-primary`}
+			name="navigationContainer"
+			className={`${styles.paddingX} w-full items-center py-5 top-0 fixed z-20 bg-primary`}
 		>
-			<div className="w-full border-2 flex justify-between items-center max-w-7xl mx-auto">
+			<div
+				name="navigationContent"
+				className="w-full border-2 flex justify-between items-center max-w-7xl mx-auto"
+			>
 				<Link
 					to="/"
 					className="flex items-center gap-2"
@@ -27,7 +31,7 @@ const Navbar = () => {
 						className="w-20 object-contain
 						"
 					/>
-					<p className="text-white text-[20px] font-bold cursor-pointer tracking-widest">
+					<p className="text-white text-[18px] font-bold cursor-pointer tracking-widest">
 						Steve Yang
 						<span className="text-red-500 sm:block hidden">
 							Frontend Developer
@@ -35,14 +39,11 @@ const Navbar = () => {
 					</p>
 				</Link>
 
-				<ul
-					name="navLinksRight"
-					className="hidden sm:flex flex-row gap-10 list-none border-green-500"
-				>
+				<ul className="hidden sm:flex flex-row gap-10 list-none">
 					{navLinks.map((link) => (
 						<li
 							key={link.id}
-							className="text-secondary hover:text-white text-[18px] font-medium cursor-pointer hover:underline underline-offset-8 hover:scale-110 hover:ease-in-out"
+							className="text-secondary hover:text-white text-[1.1rem] font-bold cursor-pointer hover:underline underline-offset-8 decoration-red-500 decoration-4"
 							onClick={() =>
 								setActive(
 									link.title
@@ -57,8 +58,8 @@ const Navbar = () => {
 				</ul>
 
 				<div
-					name="toggleIcons"
-					className="sm:hidden flex justify-end items-center"
+					name="mobileMenu"
+					className="sm:hidden border-2 flex justify-end items-center"
 				>
 					<img
 						src={toggle ? close : menu}
@@ -69,35 +70,31 @@ const Navbar = () => {
 						}
 					/>
 
-					{/* dropdown menu on small screen */}
 					<div
+						name="mobileMenuContainer"
 						className={`${
 							!toggle
 								? 'hidden'
 								: 'flex'
 						} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[35%] z-10 rounded-xl`}
 					>
-						<ul className="list-none flex justify-start items-start flex-col gap-4">
+						<ul
+							name="mobileMenuContent"
+							className="list-none flex justify-start items-start flex-col gap-4"
+						>
 							{navLinks.map(
 								(link) => (
 									<li
+										name="mobileMenuLink"
 										key={
 											link.id
 										}
-										className={`${
-											active ===
-											link.title
-												? 'text-white'
-												: 'text-secondary hover:text-red-500 text-[18px] font-medium cursor-pointer hover:underline underline-offset-8 hover:scale-110'
-										}`}
-										onClick={() => {
-											setToggle(
-												!toggle
-											);
+										className="text-secondary hover:text-white text-[1.1rem] font-bold cursor-pointer hover:underline underline-offset-8 decoration-red-500 decoration-4"
+										onClick={() =>
 											setActive(
 												link.title
-											);
-										}}
+											)
+										}
 									>
 										<a
 											href={`${link.id}`}
