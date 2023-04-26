@@ -11,7 +11,7 @@ const Navbar = () => {
 	return (
 		<nav
 			name="navigationContainer"
-			className={`${styles.paddingX} w-full items-center py-5 top-0 fixed z-20 bg-primary`}
+			className={`${styles.paddingX} w-[100%] border-2 items-center py-5 top-0 fixed z-20 bg-primary`}
 		>
 			<div
 				name="navigationContent"
@@ -31,9 +31,9 @@ const Navbar = () => {
 						className="w-20 object-contain
 						"
 					/>
-					<p className="text-white text-[18px] font-bold cursor-pointer tracking-widest">
-						Steve Yang
-						<span className="text-red-500 sm:block hidden">
+					<p className="text-white tracking-widest text-[18px] font-bold cursor-pointer">
+						Yang&nbsp;
+						<span className="text-red-500 inline-block">
 							Frontend Developer
 						</span>
 					</p>
@@ -43,7 +43,7 @@ const Navbar = () => {
 					{navLinks.map((link) => (
 						<li
 							key={link.id}
-							className="text-secondary hover:text-white text-[1.1rem] font-bold cursor-pointer hover:underline underline-offset-8 decoration-red-500 decoration-4"
+							className="text-secondary hover:text-white text-[1.1rem] font-bold cursor-pointer hover:underline underline-offset-8 decoration-4"
 							onClick={() =>
 								setActive(
 									link.title
@@ -89,7 +89,7 @@ const Navbar = () => {
 										key={
 											link.id
 										}
-										className="text-secondary hover:text-white text-[1.1rem] font-bold cursor-pointer hover:underline underline-offset-8 decoration-red-500 decoration-4"
+										className="text-secondary hover:text-white text-[1.1rem] font-bold cursor-pointer hover:underline underline-offset-8 decoration-4"
 										onClick={() =>
 											setActive(
 												link.title
