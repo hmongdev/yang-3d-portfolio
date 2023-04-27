@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { styles } from '../styles';
+import styles from '../styles';
 import { navLinks } from '../constants/index';
 import { ylogo, menu, close } from '../assets';
 
@@ -35,12 +35,12 @@ const Navbar = () => {
 						name="lastName"
 						className="text-white tracking-widest text-[18px] font-bold cursor-pointer"
 					>
-						Yang&nbsp;
+						Steve Yang&nbsp;
 						<span
 							name="jobPosition"
 							className="text-red-500 inline-block"
 						>
-							Frontend Developer
+							Junior Developer
 						</span>
 					</p>
 				</Link>
