@@ -24,7 +24,7 @@ const Hero = () => {
 				<div name="introContainer">
 					<h1
 						name="introText"
-						className={`${styles.heroHeadText} text-white`}
+						className={`${styles.heroHeadText} text-white sm:block`}
 					>
 						Hi, I'm&nbsp;
 						<span className="text-[#915eff]">
@@ -34,12 +34,13 @@ const Hero = () => {
 					<div
 						className={`${styles.heroSubText}`}
 					>
-						I code websites, applications,
-						and build video games. Check out
-						my projects below!
+						I develop apps, websites, and
+						video games. Check out my
+						projects below!
 					</div>
 				</div>
 			</div>
+			<ComputersCanvas />
 		</section>
 	);
 };
