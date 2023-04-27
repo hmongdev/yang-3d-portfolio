@@ -12,7 +12,7 @@ const Hero = () => {
 				className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-2xl mx-auto flex flex-row items-start gap-5`}
 			>
 				<div
-					name="circleContainer"
+					name="needleContainer"
 					className="flex flex-col justify-center items-center mt-5"
 				>
 					<div
@@ -43,7 +43,7 @@ const Hero = () => {
 			<ComputersCanvas />
 			<div
 				name="fmContainer"
-				className="relative xs:bottom-10 bottom-32 w-full flex justify-center items-center"
+				className="absolute bottom-32 w-full flex justify-center items-center"
 			>
 				<a name="aboutLink" href="#about">
 					<div
@@ -56,11 +56,11 @@ const Hero = () => {
 								y: [0, 24, 0],
 							}}
 							transition={{
-								duration: 3,
+								duration: 5,
 								repeat: Infinity,
 								repeatType: 'loop',
 							}}
-							className="w-3 h-3 rounded-full bg-white mb-1"
+							className="w-3 h-3 rounded-full bg-[#915eff] border border-white mb-1"
 						/>
 					</div>
 				</a>
