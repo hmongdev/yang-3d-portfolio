@@ -11,11 +11,11 @@ const Navbar = () => {
 	return (
 		<nav
 			name="navigationContainer"
-			className={`${styles.paddingX} w-[100%] border-2 items-center py-5 top-0 fixed z-20 bg-primary`}
+			className={`${styles.paddingX} w-[100%] items-center py-5 top-0 fixed z-20 bg-primary`}
 		>
 			<div
 				name="navigationContent"
-				className="w-full border-2 flex justify-between items-center max-w-7xl mx-auto"
+				className="w-full flex justify-between items-center max-w-7xl mx-auto"
 			>
 				<Link
 					to="/"
@@ -31,9 +31,15 @@ const Navbar = () => {
 						className="w-20 object-contain
 						"
 					/>
-					<p className="text-white tracking-widest text-[18px] font-bold cursor-pointer">
+					<p
+						name="lastName"
+						className="text-white tracking-widest text-[18px] font-bold cursor-pointer"
+					>
 						Yang&nbsp;
-						<span className="text-red-500 inline-block">
+						<span
+							name="jobPosition"
+							className="text-red-500 inline-block"
+						>
 							Frontend Developer
 						</span>
 					</p>
@@ -58,8 +64,8 @@ const Navbar = () => {
 				</ul>
 
 				<div
-					name="mobileMenu"
-					className="sm:hidden border-2 flex justify-end items-center"
+					name="mobileIcon"
+					className="sm:hidden flex justify-end items-center"
 				>
 					<img
 						src={toggle ? close : menu}
@@ -76,7 +82,7 @@ const Navbar = () => {
 							!toggle
 								? 'hidden'
 								: 'flex'
-						} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[35%] z-10 rounded-xl`}
+						} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[35%] justify-center z-10 rounded-xl border-2`}
 					>
 						<ul
 							name="mobileMenuContent"
