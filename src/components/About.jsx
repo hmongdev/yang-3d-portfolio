@@ -15,7 +15,7 @@ const ServiceCard = ({ index, title, icon }) => {
 					0.5 * index,
 					0.75
 				)}
-				className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+				className="w-full green-pink-gradient p-[1px] rounded-[20px] hover:shadow-card hover:ease-in-out"
 			>
 				<div
 					options={{
@@ -44,10 +44,14 @@ const About = () => {
 	return (
 		<>
 			<motion.div variants={textVariant()}>
-				<p className={styles.sectionSubText}>
+				<p
+					className={`${styles.sectionSubText} text-center`}
+				>
 					Introduction
 				</p>
-				<h2 className={styles.sectionHeadText}>
+				<h2
+					className={`${styles.sectionHeadText} text-center`}
+				>
 					Overview
 				</h2>
 			</motion.div>
@@ -65,7 +69,7 @@ const About = () => {
 				ideas to life!
 			</motion.p>
 
-			<div className="mt-20 flex flex-wrap gap-10">
+			<div className="mt-20 flex flex-wrap gap-10 justify-evenly">
 				{services.map((service, index) => (
 					<ServiceCard
 						key={service.title}

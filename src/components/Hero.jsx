@@ -43,7 +43,7 @@ const Hero = () => {
 			<ComputersCanvas />
 			<div
 				name="fmContainer"
-				className="absolute bottom-32 w-full flex justify-center items-center"
+				className="absolute top-[35%] w-full flex justify-center"
 			>
 				<a name="aboutLink" href="#about">
 					<div
