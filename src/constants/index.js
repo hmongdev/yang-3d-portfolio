@@ -45,11 +45,11 @@ export const navLinks = [
 
 const services = [
 	{
-		title: 'Responsive Web / Mobile Design',
+		title: 'Responsive Design',
 		icon: web,
 	},
 	{
-		title: 'React (Native)',
+		title: `React.js for Web / Mobile`,
 		icon: mobile,
 	},
 	{

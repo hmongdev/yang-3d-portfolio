@@ -45,25 +45,32 @@ const Hero = () => {
 				name="fmContainer"
 				className="absolute top-[35%] w-full flex justify-center"
 			>
-				<a name="aboutLink" href="#about">
-					<div
-						name="fmButton"
-						className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2
-					"
-					>
-						<motion.div
-							animate={{
-								y: [0, 24, 0],
-							}}
-							transition={{
-								duration: 5,
-								repeat: Infinity,
-								repeatType: 'loop',
-							}}
-							className="w-3 h-3 rounded-full bg-[#915eff] border border-white mb-1"
-						/>
-					</div>
-				</a>
+				<div className="text-center text-red-500">
+					<a name="aboutLink" href="#about">
+						<div
+							name="fmButton"
+							className="w-[35px] h-[64px] rounded-3xl border-4 border-gray-100 flex justify-center items-start p-2
+						"
+						>
+							<motion.div
+								animate={{
+									y: [
+										0,
+										24,
+										0,
+									],
+								}}
+								transition={{
+									duration: 5,
+									repeat: Infinity,
+									repeatType: 'loop',
+								}}
+								className="w-3 h-3 rounded-full border-2 border-gray-100 mb-1"
+							/>
+						</div>
+						Tap
+					</a>
+				</div>
 			</div>
 		</section>
 	);
