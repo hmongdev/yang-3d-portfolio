@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { styles } from '../styles';
+import styles from '../styles';
 import { navLinks } from '../constants/index';
 import { ylogo, menu, close } from '../assets';
 
