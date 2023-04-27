@@ -14,7 +14,7 @@ import { textVariant } from '../utils/motion';
 
 const ExperienceCard = ({ experience }) => {
 	return (
-		<div className="flex-col-reverse">
+		<div name="cardContainer">
 			<VerticalTimelineElement
 				contentStyle={{
 					background: '#1d1836',
@@ -23,25 +23,35 @@ const ExperienceCard = ({ experience }) => {
 				contentArrowStyle={{
 					borderRight: '7px solid  #232631',
 				}}
-				date={experience.date}
-				iconStyle={{ background: experience.iconBg }}
+				iconStyle={{
+					background: experience.iconBg,
+				}}
 				icon={
-					<div className="flex justify-center items-center w-full h-full">
+					<div
+						name="cardIconContainer"
+						className="flex justify-center items-center w-full h-full"
+					>
 						<img
+							name="cardIcon"
 							src={experience.icon}
 							alt={
 								experience.company_name
 							}
-							className="w-[60%] h-[60%] object-contain"
+							className="w-[80%] h-[80%] object-contain"
 						/>
 					</div>
 				}
 			>
 				<div>
-					<h3 className="text-white text-[24px] font-bold">
+					<h3
+						name="cardJobPosition"
+						className="text-red-500 text-[24px] font-bold"
+					>
 						{experience.title}
 					</h3>
+					<h3>{experience.date}</h3>
 					<p
+						name="cardCompanyName"
 						className="text-secondary text-[16px] font-semibold"
 						style={{ margin: 0 }}
 					>
@@ -69,7 +79,10 @@ const ExperienceCard = ({ experience }) => {
 const Experience = () => {
 	return (
 		<>
-			<motion.div variants={textVariant()}>
+			<motion.div
+				name="titleExperience"
+				variants={textVariant()}
+			>
 				<p
 					className={`${styles.sectionSubText} text-center`}
 				>
@@ -82,7 +95,7 @@ const Experience = () => {
 				</h2>
 			</motion.div>
 
-			<div className="mt-20 flex">
+			<div className="mt-20">
 				<VerticalTimeline>
 					{experiences.map(
 						(experience, index) => (

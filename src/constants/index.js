@@ -17,6 +17,9 @@ import {
 	docker,
 	meta,
 	starbucks,
+	prime,
+	jtellr,
+	sfg,
 	tesla,
 	shopify,
 	carrent,
@@ -116,57 +119,57 @@ const technologies = [
 
 const experiences = [
 	{
-		title: 'React.js Developer',
-		company_name: 'Starbucks',
-		icon: starbucks,
-		iconBg: '#383E56',
-		date: 'March 2020 - April 2021',
-		points: [
-			'Developing and maintaining web applications using React.js and other related technologies.',
-			'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-			'Implementing responsive design and ensuring cross-browser compatibility.',
-			'Participating in code reviews and providing constructive feedback to other developers.',
-		],
-	},
-	{
-		title: 'React Native Developer',
-		company_name: 'Tesla',
-		icon: tesla,
-		iconBg: '#E6DEDD',
-		date: 'Jan 2021 - Feb 2022',
-		points: [
-			'Developing and maintaining web applications using React.js and other related technologies.',
-			'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-			'Implementing responsive design and ensuring cross-browser compatibility.',
-			'Participating in code reviews and providing constructive feedback to other developers.',
-		],
-	},
-	{
-		title: 'Web Developer',
-		company_name: 'Shopify',
-		icon: shopify,
-		iconBg: '#383E56',
-		date: 'Jan 2022 - Jan 2023',
-		points: [
-			'Developing and maintaining web applications using React.js and other related technologies.',
-			'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-			'Implementing responsive design and ensuring cross-browser compatibility.',
-			'Participating in code reviews and providing constructive feedback to other developers.',
-		],
-	},
-	{
-		title: 'Full stack Developer',
-		company_name: 'Meta',
-		icon: meta,
+		title: 'Front-End Software Engineer',
+		company_name: 'JourneyTellr',
+		icon: jtellr,
 		iconBg: '#E6DEDD',
 		date: 'Jan 2023 - Present',
 		points: [
-			'Developing and maintaining web applications using React.js and other related technologies.',
-			'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-			'Implementing responsive design and ensuring cross-browser compatibility.',
-			'Participating in code reviews and providing constructive feedback to other developers.',
+			'Redesigned react native components and theme to match wireframes according to product team ',
+			'Created svg icons from scratch and implemented into components',
+			'Technologies: JavaScript, React-Native, Cocoapods, Xcode, Flipper, Asana, Microsoft 365, Azure AWS, React-Query, React-Navigation',
 		],
 	},
+
+	{
+		title: 'Full Stack Software Engineer Student',
+		company_name: 'Prime Digital Academy',
+		icon: prime,
+		iconBg: '#383E56',
+		date: 'May 2022 - Sep 2022 ',
+		points: [
+			'Completed 20-week, full-time, full-stack software engineering program, developing technical and non-technical skills in a highly collaborative environment',
+			'Designed two full-stack web applications in modern technologies',
+			'Practiced Agile development, standups, weekly group projects, whiteboard coding challenges, diversity, equity, and inclusion training, hybrid work, time management, and active listening',
+			'Technologies: JavaScript, PostgreSQL, Express, React, Node',
+		],
+	},
+	{
+		title: 'Software Developer Apprentice',
+		company_name: 'Software for Good',
+		icon: sfg,
+		iconBg: '#E6DEDD',
+		date: 'Nov 2021 - Feb 2022',
+		points: [
+			'Designed a backend feature that allows admin accounts to manually add applicants into the database, if deadline has expired',
+			'Familiarized with Model View Controller (MVC) architecture and CRUD',
+			'Worked with a real-world client to design features for the city of Saint Paul’s Right Track program',
+			'Technologies: Ruby, Ruby on Rails, Rspec, Heroku',
+		],
+	},
+	// {
+	// 	title: 'React.js Developer',
+	// 	company_name: 'Starbucks',
+	// 	icon: starbucks,
+	// 	iconBg: '#383E56',
+	// 	date: 'March 2020 - April 2021',
+	// 	points: [
+	// 		'Developing and maintaining web applications using React.js and other related technologies.',
+	// 		'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
+	// 		'Implementing responsive design and ensuring cross-browser compatibility.',
+	// 		'Participating in code reviews and providing constructive feedback to other developers.',
+	// 	],
+	// },
 ];
 
 const testimonials = [
