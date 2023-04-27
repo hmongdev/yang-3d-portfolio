@@ -49,7 +49,7 @@ const Navbar = () => {
 					{navLinks.map((link) => (
 						<li
 							key={link.id}
-							className="text-secondary hover:text-white text-[1.1rem] font-bold cursor-pointer hover:underline underline-offset-8 decoration-4"
+							className="text-secondary hover:text-white text-[1.1rem] font-bold cursor-pointer hover:underline underline-offset-8 decoration-4 decoration-red-500"
 							onClick={() =>
 								setActive(
 									link.title
@@ -95,7 +95,7 @@ const Navbar = () => {
 										key={
 											link.id
 										}
-										className="text-secondary hover:text-white text-[1.1rem] font-bold cursor-pointer hover:underline underline-offset-8 decoration-4"
+										className="text-secondary hover:text-white text-[1.1rem] font-bold cursor-pointer hover:underline underline-offset-8 decoration-4 decoration-red-500"
 										onClick={() =>
 											setActive(
 												link.title
