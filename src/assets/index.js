@@ -36,8 +36,18 @@ import sfg from './company/sfg.png';
 import carrent from './carrent.png';
 import jobit from './jobit.png';
 import tripguide from './tripguide.png';
+import weather from './weather.png';
+import mindfully from './mindfully.png';
+import rci from './rci.png';
+import tindog from './tindog.png';
+import carshare from './carshare.png';
 
 export {
+	weather,
+	mindfully,
+	rci,
+	tindog,
+	carshare,
 	asana,
 	pgsql,
 	expressjs,

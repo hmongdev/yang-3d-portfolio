@@ -1,4 +1,9 @@
 import {
+	weather,
+	mindfully,
+	rci,
+	tindog,
+	carshare,
 	asana,
 	xcode,
 	expressjs,
@@ -204,16 +209,38 @@ const testimonials = [
 
 const projects = [
 	{
-		name: 'Car Rent',
+		name: 'React Weather App',
 		description:
-			'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
+			'React Web app that uses the OpenWeather API to provide weather information',
 		tags: [
 			{
 				name: 'react',
 				color: 'blue-text-gradient',
 			},
 			{
-				name: 'mongodb',
+				name: 'openweather',
+				color: 'orange-text-gradient',
+			},
+			{
+				name: 'tailwind',
+				color: 'pink-text-gradient',
+			},
+		],
+		image: weather,
+		source_code_link:
+			'https://github.com/yang2674/react-weather-app',
+	},
+	{
+		name: 'mindfully',
+		description:
+			'React Web app that allows users to track journaling and meditation using the Spotify API.',
+		tags: [
+			{
+				name: 'react',
+				color: 'blue-text-gradient',
+			},
+			{
+				name: 'spotify',
 				color: 'green-text-gradient',
 			},
 			{
@@ -221,50 +248,73 @@ const projects = [
 				color: 'pink-text-gradient',
 			},
 		],
-		image: carrent,
-		source_code_link: 'https://github.com/',
+		image: mindfully,
+		source_code_link:
+			'https://github.com/yang2674/solo-project-mindfully',
 	},
 	{
-		name: 'Job IT',
+		name: 'rochester community initiative',
 		description:
-			'Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.',
+			'React Web app that allows school counselors to search for mental health professionals in Olmstead County.',
 		tags: [
 			{
 				name: 'react',
 				color: 'blue-text-gradient',
 			},
 			{
-				name: 'restapi',
-				color: 'green-text-gradient',
-			},
-			{
-				name: 'scss',
-				color: 'pink-text-gradient',
-			},
-		],
-		image: jobit,
-		source_code_link: 'https://github.com/',
-	},
-	{
-		name: 'Trip Guide',
-		description:
-			'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
-		tags: [
-			{
-				name: 'nextjs',
+				name: 'postgresql',
 				color: 'blue-text-gradient',
 			},
 			{
-				name: 'supabase',
-				color: 'green-text-gradient',
-			},
-			{
-				name: 'css',
+				name: 'tailwind',
 				color: 'pink-text-gradient',
 			},
 		],
-		image: tripguide,
-		source_code_link: 'https://github.com/',
+		image: rci,
+		source_code_link: 'https://github.com/yang2674/rochinitiative',
+	},
+	{
+		name: 'tindog',
+		description:
+			'React Web / Mobile app that is based on Tinder. Fun project to practice Tailwind and React.',
+		tags: [
+			{
+				name: 'react',
+				color: 'blue-text-gradient',
+			},
+			// {
+			// 	name: 'postgresql',
+			// 	color: 'blue-text-gradient',
+			// },
+			{
+				name: 'tailwind',
+				color: 'pink-text-gradient',
+			},
+		],
+		image: tindog,
+		source_code_link: 'https://github.com/yang2674/react-tindog',
+	},
+	{
+		name: 'carshare calculator',
+		description:
+			'React Web app that allows people in the Twin Cities to calculate the costs of carshare plans with Evie and HOURCAR.',
+		tags: [
+			{
+				name: 'react',
+				color: 'blue-text-gradient',
+			},
+			// {
+			// 	name: 'postgresql',
+			// 	color: 'blue-text-gradient',
+			// },
+			{
+				name: 'tailwind',
+				color: 'pink-text-gradient',
+			},
+		],
+		image: carshare,
+		source_code_link:
+			'https://github.com/yang2674/carshare-calculator',
 	},
 ];
 
