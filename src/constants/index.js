@@ -119,6 +119,7 @@ const technologies = [
 
 const experiences = [
 	{
+		index: 0,
 		title: 'Front-End Software Engineer',
 		company_name: 'JourneyTellr',
 		icon: jtellr,
@@ -132,6 +133,7 @@ const experiences = [
 	},
 
 	{
+		index: 1,
 		title: 'Full Stack Software Engineer Student',
 		company_name: 'Prime Digital Academy',
 		icon: prime,
@@ -145,6 +147,7 @@ const experiences = [
 		],
 	},
 	{
+		index: 2,
 		title: 'Software Developer Apprentice',
 		company_name: 'Software for Good',
 		icon: sfg,

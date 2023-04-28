@@ -16,6 +16,12 @@ const ExperienceCard = ({ experience }) => {
 	return (
 		<div name="cardContainer">
 			<VerticalTimelineElement
+				key={experience.index}
+				className={`vertical-timeline-element--${
+					experience.index % 2 === 0
+						? 'left'
+						: 'right'
+				}`}
 				contentStyle={{
 					background: '#1d1836',
 					color: '#fff',
