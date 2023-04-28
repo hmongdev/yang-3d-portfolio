@@ -15,7 +15,7 @@ const ServiceCard = ({ index, title, icon }) => {
 					0.5 * index,
 					5
 				)}
-				className="w-full green-pink-gradient p-[1px] rounded-[20px] hover:shadow-card hover:ease-in-out"
+				className="w-full green-pink-gradient p-[2px] rounded-[20px] hover:shadow-card hover:ease-in-out"
 			>
 				<div
 					options={{

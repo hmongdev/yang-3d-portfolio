@@ -223,7 +223,7 @@ const projects = [
 			},
 			{
 				name: 'tailwind',
-				color: 'pink-text-gradient',
+				color: 'robin-text-gradient',
 			},
 		],
 		image: weather,
@@ -231,7 +231,7 @@ const projects = [
 			'https://github.com/yang2674/react-weather-app',
 	},
 	{
-		name: 'mindfully',
+		name: 'Mindfully',
 		description:
 			'React Web app that allows users to track journaling and meditation using the Spotify API.',
 		tags: [
@@ -245,7 +245,7 @@ const projects = [
 			},
 			{
 				name: 'tailwind',
-				color: 'pink-text-gradient',
+				color: 'robin-text-gradient',
 			},
 		],
 		image: mindfully,
@@ -253,7 +253,7 @@ const projects = [
 			'https://github.com/yang2674/solo-project-mindfully',
 	},
 	{
-		name: 'rochester community initiative',
+		name: 'Rochester Community Initiative',
 		description:
 			'React Web app that allows school counselors to search for mental health professionals in Olmstead County.',
 		tags: [
@@ -267,14 +267,14 @@ const projects = [
 			},
 			{
 				name: 'tailwind',
-				color: 'pink-text-gradient',
+				color: 'robin-text-gradient',
 			},
 		],
 		image: rci,
 		source_code_link: 'https://github.com/yang2674/rochinitiative',
 	},
 	{
-		name: 'tindog',
+		name: 'Tindog',
 		description:
 			'React Web / Mobile app that is based on Tinder. Fun project to practice Tailwind and React.',
 		tags: [
@@ -288,14 +288,14 @@ const projects = [
 			// },
 			{
 				name: 'tailwind',
-				color: 'pink-text-gradient',
+				color: 'robin-text-gradient',
 			},
 		],
 		image: tindog,
 		source_code_link: 'https://github.com/yang2674/react-tindog',
 	},
 	{
-		name: 'carshare calculator',
+		name: 'Carshare Calculator',
 		description:
 			'React Web app that allows people in the Twin Cities to calculate the costs of carshare plans with Evie and HOURCAR.',
 		tags: [
@@ -309,7 +309,7 @@ const projects = [
 			// },
 			{
 				name: 'tailwind',
-				color: 'pink-text-gradient',
+				color: 'robin-text-gradient',
 			},
 		],
 		image: carshare,
