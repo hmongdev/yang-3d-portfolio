@@ -64,7 +64,7 @@ const About = () => {
 					I'm a Junior Developer with experiences
 					in JavaScript, React (Native), Node,
 					Express, and PostgreSQL. I'm creative,
-					detail-oriented, and am focused towards
+					detail-oriented, and focused towards
 					efficiency, scalability, and
 					user-friendly solutions that solve
 					real-world problems. Let's work together

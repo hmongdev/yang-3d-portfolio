@@ -1,4 +1,8 @@
 import {
+	asana,
+	xcode,
+	expressjs,
+	pgsql,
 	mobile,
 	backend,
 	creator,
@@ -75,18 +79,18 @@ const technologies = [
 		name: 'JavaScript',
 		icon: javascript,
 	},
-	{
-		name: 'TypeScript',
-		icon: typescript,
-	},
+	// {
+	// 	name: 'TypeScript',
+	// 	icon: typescript,
+	// },
 	{
 		name: 'React JS',
 		icon: reactjs,
 	},
-	{
-		name: 'Redux Toolkit',
-		icon: redux,
-	},
+	// {
+	// 	name: 'Redux Toolkit',
+	// 	icon: redux,
+	// },
 	{
 		name: 'Tailwind CSS',
 		icon: tailwind,
@@ -96,24 +100,20 @@ const technologies = [
 		icon: nodejs,
 	},
 	{
-		name: 'MongoDB',
-		icon: mongodb,
+		name: 'Express JS',
+		icon: expressjs,
 	},
 	{
-		name: 'Three JS',
-		icon: threejs,
+		name: 'PostgreSQL',
+		icon: pgsql,
 	},
+	// {
+	// 	name: 'MongoDB',
+	// 	icon: mongodb,
+	// },
 	{
-		name: 'git',
-		icon: git,
-	},
-	{
-		name: 'figma',
-		icon: figma,
-	},
-	{
-		name: 'docker',
-		icon: docker,
+		name: 'Xcode',
+		icon: xcode,
 	},
 ];
 
