@@ -22,10 +22,17 @@ const ExperienceCard = ({ experience }) => {
 						? 'left'
 						: 'right'
 				}`}
-				contentStyle={{
-					background: '#1d1836',
-					color: '#fff',
-				}}
+				contentStyle={
+					experience.index === 0
+						? {
+								backgroundColor:
+									'#BDA4D7',
+						  }
+						: {
+								background: '#1d1836',
+								color: '#fff',
+						  }
+				}
 				contentArrowStyle={{
 					borderRight: '7px solid  #232631',
 				}}
