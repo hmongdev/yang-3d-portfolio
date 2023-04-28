@@ -10,10 +10,10 @@ const ServiceCard = ({ index, title, icon }) => {
 		<Tilt className="xs:w-[250px] w-full">
 			<motion.div
 				variants={fadeIn(
-					'right',
+					'up',
 					'spring',
 					0.5 * index,
-					0.75
+					5
 				)}
 				className="w-full green-pink-gradient p-[1px] rounded-[20px] hover:shadow-card hover:ease-in-out"
 			>
@@ -58,7 +58,7 @@ const About = () => {
 
 			<div className="flex justify-center">
 				<motion.p
-					variants={fadeIn('', '', 0.1, 1)}
+					variants={fadeIn('', '', 0.3, 1)}
 					className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] text-center"
 				>
 					I'm a Junior Developer with experiences
