@@ -1,22 +1,39 @@
-import { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+
 import styles from '../styles';
-import { navLinks } from '../constants/index';
+import { navLinks } from '../constants';
 import { ylogo, menu, close } from '../assets';
 
 const Navbar = () => {
 	const [active, setActive] = useState('');
 	const [toggle, setToggle] = useState(false);
+	const [scrolled, setScrolled] = useState(false);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			const scrollTop = window.scrollY;
+			if (scrollTop > 100) {
+				setScrolled(true);
+			} else {
+				setScrolled(false);
+			}
+		};
+
+		window.addEventListener('scroll', handleScroll);
+
+		return () => window.removeEventListener('scroll', handleScroll);
+	}, []);
 
 	return (
 		<nav
-			name="navigationContainer"
-			className={`${styles.paddingX} w-[100%] items-center py-5 top-0 fixed z-20 bg-primary`}
+			className={`${
+				styles.paddingX
+			} w-full flex items-center py-5 fixed top-0 z-20 ${
+				scrolled ? 'bg-primary' : 'bg-transparent'
+			}`}
 		>
-			<div
-				name="navigationContent"
-				className="w-full flex justify-between items-center max-w-7xl mx-auto"
-			>
+			<div className="w-full flex justify-between items-center max-w-7xl mx-auto">
 				<Link
 					to="/"
 					className="flex items-center gap-2"
@@ -28,90 +45,87 @@ const Navbar = () => {
 					<img
 						src={ylogo}
 						alt="ylogo"
-						className="w-20 object-contain
-						"
+						className="w-9 h-9 object-contain"
 					/>
-					<p
-						name="lastName"
-						className="text-white tracking-widest text-[18px] font-bold cursor-pointer"
-					>
-						Steve Yang&nbsp;
-						<span
-							name="jobPosition"
-							className="text-red-500 inline-block"
-						>
-							Junior Developer
+					<p className="text-white text-[18px] font-bold cursor-pointer flex ">
+						Steve Yang &nbsp;
+						<span className="md:block hidden">
+							{' '}
+							| Junior Developer
 						</span>
 					</p>
 				</Link>
 
-				<ul className="hidden sm:flex flex-row gap-10 list-none">
-					{navLinks.map((link) => (
+				<ul className="list-none hidden sm:flex flex-row gap-10">
+					{navLinks.map((nav) => (
 						<li
-							key={link.id}
-							className="text-secondary hover:text-white text-[1.1rem] font-bold cursor-pointer hover:underline underline-offset-8 decoration-4"
+							key={nav.id}
+							className={`${
+								active ===
+								nav.title
+									? 'text-white'
+									: 'text-secondary'
+							} hover:text-white hover:underline underline-offset-8 text-[18px] font-medium cursor-pointer`}
 							onClick={() =>
 								setActive(
-									link.title
+									nav.title
 								)
 							}
 						>
-							<a href={`${link.id}`}>
-								{link.title}
+							<a href={`#${nav.id}`}>
+								{nav.title}
 							</a>
 						</li>
 					))}
 				</ul>
 
-				<div
-					name="mobileIcon"
-					className="sm:hidden flex justify-end items-center"
-				>
+				<div className="sm:hidden flex flex-1 justify-end items-center">
 					<img
 						src={toggle ? close : menu}
 						alt="menu"
-						className="w-[28px] h-[28px] object-contain cursor-pointer"
+						className="w-[28px] h-[28px] object-contain"
 						onClick={() =>
 							setToggle(!toggle)
 						}
 					/>
 
 					<div
-						name="mobileMenuContainer"
 						className={`${
 							!toggle
 								? 'hidden'
 								: 'flex'
-						} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[35%] justify-center z-10 rounded-xl border-2`}
+						} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
 					>
-						<ul
-							name="mobileMenuContent"
-							className="list-none flex justify-start items-start flex-col gap-4"
-						>
-							{navLinks.map(
-								(link) => (
-									<li
-										name="mobileMenuLink"
-										key={
-											link.id
-										}
-										className="text-secondary hover:text-white text-[1.1rem] font-bold cursor-pointer hover:underline underline-offset-8 decoration-4"
-										onClick={() =>
-											setActive(
-												link.title
-											)
-										}
+						<ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
+							{navLinks.map((nav) => (
+								<li
+									key={
+										nav.id
+									}
+									className={`font-poppins font-medium cursor-pointer text-[16px] ${
+										active ===
+										nav.title
+											? 'text-white'
+											: 'text-secondary'
+									}`}
+									onClick={() => {
+										setToggle(
+											!toggle
+										);
+										setActive(
+											nav.title
+										);
+									}}
+								>
+									<a
+										href={`#${nav.id}`}
 									>
-										<a
-											href={`${link.id}`}
-										>
-											{
-												link.title
-											}
-										</a>
-									</li>
-								)
-							)}
+										{
+											nav.title
+										}
+									</a>
+								</li>
+							))}
 						</ul>
 					</div>
 				</div>

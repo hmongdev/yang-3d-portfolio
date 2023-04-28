@@ -37,7 +37,7 @@ const Works = () => {
 			</div>
 			<div
 				name="projects"
-				className="mt-20 flex flex-wrap gap-10 justify-evenly"
+				className="mt-20 flex flex-wrap col-span-2 gap-10 justify-evenly"
 			>
 				{projects.map((project, index) => (
 					<ProjectCard
